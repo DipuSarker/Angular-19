@@ -1,0 +1,60 @@
+<h1>Data-binding works!</h1>
+<div class="row">
+
+    <div class="col-3">
+        1. Interpolation
+        <p>Hello, {{ firstName }}!</p>
+
+        <div>
+            {{createDate }}
+        </div>
+    </div>
+
+
+    <div class="col-3">
+        2. Property Binding
+        <input type="text" [value]="firstName" name="first" id="first">
+        <br>
+        <input type="text" [placeholder]="placeHolderName" name="first" id="first">
+
+        <br>
+
+        <div [class]="divColor" style="height: 100px; width: 100px;">
+
+        </div>
+    </div>
+
+    <div class="col-3">
+      3. Event Binding
+      <button type="submit" (click)="showMessage()">Show Message</button>
+    </div>
+
+
+    <div class="col-3">
+      <select (change)="cityChoice()">
+        <option value="Pune">Pune</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Chennai">Chennai</option>
+
+      </select>
+    </div>
+</div>
+
+
+<div class="row">
+  <div class="col-3">
+    <input type="text" [(ngModel)]="firstName">
+  </div>
+
+  <div class="col-3">
+    <select [(ngModel)]="cityName" >
+      <option value="Pune">Pune</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Bangalore">Bangalore</option>
+      <option value="Chennai">Chennai</option>
+    </select>
+    -- {{cityName}}
+  </div>
+
+</div>

@@ -1,0 +1,97 @@
+<p>control-statement works!</p>
+
+<div class="row">
+  <div class="col-3">
+    @if (divVisible == true) {
+      <div class="p-3 bg-success">Div 1</div>
+    }
+
+  </div>
+
+
+  <div class="col-3">
+    @if (isChecked == true) {
+      <div class="p-3 bg-primary">Box Is Checked</div>
+    }
+    @else {
+      <div class="p-3 bg-danger">Box Is Not Checked</div>
+    }
+
+  </div>
+
+  <div class="col-3">
+    @if (dayName == 'Mon') {
+      <div class="p-3 bg-info">Monday</div>
+    }@else if (dayName == 'Tue') {
+      <div class="p-3 bg-warning">Tuesday</div>
+    }@else if (dayName == 'Wed') {
+      <div class="p-3 bg-success">Wednesday</div>
+    }@else if (dayName == 'Thu') {
+      <div class="p-3 bg-info">Thursday</div>
+    }@else if (dayName == 'Fri') {
+      <div class="p-3 bg-warning">Friday</div>
+    }@else if (dayName == 'Sat') {
+      <div class="p-3 bg-success">Saturday</div>
+    }@else if (dayName == 'Sun') {
+      <div class="p-3 bg-success">Sunday</div>
+    }@else {
+      <div class="p-3 bg-danger">Invalid Day</div>}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3 p-3">
+    <button type="button" class="btn btn-success m-2" (click)="showDiv(true)">Show</button>
+    <button type="button" class="btn btn-danger m-2" (click)="showDiv(false)">Hide</button>
+  </div>
+
+  <div class="col-3 p-3">
+    <input type="checkbox" [(ngModel)]="isChecked">
+  </div>
+
+  <div class="col-3 p-3">
+    <input type="text" [(ngModel)]="dayName" maxlength="3" placeholder="Enter Day">
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-3 p-3">
+    <select>
+      @for (item of cityList; track $index) {
+        <option>{{item}}</option>
+      }
+    </select>
+  </div>
+
+  <div class="col-3 p-3">
+      @for (item of cityList; track $index) {
+        <button class="btn btn-success p-2 m-1">{{item}}</button>
+      }
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-8 p-3">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <th>SL No.</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Phone</th>
+      </thead>
+
+      <tbody>
+        @for (item of empArray; track $index) {
+          <tr>
+            <td>{{$index + 1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.city}}</td>
+            <td>{{item.phone}}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

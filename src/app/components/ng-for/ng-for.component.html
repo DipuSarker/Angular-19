@@ -1,0 +1,68 @@
+<p>ng-for works!</p>
+
+<h4>Using UL LI</h4>
+<div class="row">
+  <div class="col-3">
+    <ul *ngFor="let city of cityList">
+      <li>{{city}}</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Using Button</h3>
+<div class="col-6">
+  <button class="btn btn-success m-2" *ngFor="let city of cityList">
+    {{city}}
+  </button>
+</div>
+
+<h2>Using Div</h2>
+<div class="col-3" *ngFor="let city of cityList">
+  <span >
+    {{city}}
+  </span>
+</div>
+
+
+<hr>
+<hr>
+
+<h4>Using Dropdown</h4>
+
+<div class="row">
+  <div class="col-3">
+    <select>
+      <option *ngFor="let emp of employeeList" [value]="emp.id">
+        {{emp.name}} - {{emp.city}}
+      </option>
+    </select>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-8">
+    <h4>Using Table</h4>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let emp of employeeList">
+          <td>{{emp.id}}</td>
+          <td>{{emp.name}}</td>
+          <td>{{emp.city}}</td>
+          <td>{{emp.phone}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
