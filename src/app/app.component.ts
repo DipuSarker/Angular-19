@@ -7,12 +7,23 @@ import { NgClassComponent } from './components/ng-class/ng-class.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { ControlStatementComponent } from './components/control-statement/control-statement.component';
+import { SignalComponent } from './components/signal/signal.component';
 
 @Component({
   selector: 'app-root',
-  imports: [NgStyleComponent, RouterOutlet, DataBindingComponent, NgClassComponent, NgForComponent, NgIFComponent, AdminComponent, ControlStatementComponent],
+  imports: [
+    NgStyleComponent,
+    RouterOutlet,
+    DataBindingComponent,
+    NgClassComponent,
+    NgForComponent,
+    NgIFComponent,
+    AdminComponent,
+    ControlStatementComponent,
+    SignalComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'my-app';
